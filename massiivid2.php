@@ -60,7 +60,7 @@ foreach ($opilased as $opilane) {
 echo '<hr />';
 
 foreach ($opilased as $opilane) {
-    arsort($opilane);
+    asort($opilane);
     foreach ($opilane as $voti => $vaartus) {
         echo $voti.' - '.$vaartus.'<br />';
     }
