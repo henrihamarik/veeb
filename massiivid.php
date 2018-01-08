@@ -91,7 +91,47 @@ foreach ($arvud as $arv) {
  * tsükli abil, samuti EI SAA kasutada
  * grupeerimisfunktisoone ega muuta antud massiivi
  * */
-
+echo '<hr />';
+echo "<h2>Ülesanne 1</h2><br />";
 function looMassiiv($elementideArv) {
     $arvud = array();
 }
+
+echo '<hr />';
+echo "<h2>Ülesanne 2</h2><br />";
+
+echo '<hr />';
+echo "<h2>Ülesanne 3</h2><br />";
+function vahetaMinMax(&$massiiv) {
+    $min = min($massiiv);
+    $max = max($massiiv);
+    echo 'min = '.$min.'<br />';
+    echo 'max = '.$max.'<br />';
+    for ($i = 0; $i < count($massiiv); $i++) {
+        if ($massiiv[$i] == $min) {
+            $massiiv[$i] = $max;
+        }
+        else if ($massiiv[$i] == $max) {
+            $massiiv[$i] = $min;
+        }
+    }
+}
+vahetaMinMax($arvud);
+valjastaMassiiv($arvud);
+
+echo '<hr />';
+echo "<h2>Ülesanne 4</h2><br />";
+
+echo '<hr />';
+echo "<h2>Ülesanne 5</h2><br />";
+function mitteDubleeri($massiiv) {
+    $valjasta = '';
+    foreach ($massiiv as $element) {
+        if ($valjasta != $element) {
+            $valjasta = $element;
+            echo $element.'&nbsp';
+        }
+    }
+}
+mitteDubleeri(array(1, 1, 1, 2, 2, 2, 2, 3));
+echo '<hr />';
