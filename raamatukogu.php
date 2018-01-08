@@ -15,4 +15,5 @@ $raamat = array(
     'print' => 'Penguin',
     'status' => 'valjas'
 );
-salvestaRaamat(array(1, 2, 3), 'raamatud.txt');
+salvestaRaamat($raamat, 'raamatud.txt');
+loeAndmed('raamatud.txt');
