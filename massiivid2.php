@@ -51,5 +51,20 @@ echo '</pre>';
 echo '<hr />';
 
 foreach ($opilased as $opilane) {
-    echo $opilane.'<br />';
+    foreach ($opilane as $voti => $vaartus) {
+        echo $voti.' - '.$vaartus.'<br />';
+    }
+    echo '---------------'.'<br />';
 }
+
+echo '<hr />';
+
+foreach ($opilased as $opilane) {
+    arsort($opilane);
+    foreach ($opilane as $voti => $vaartus) {
+        echo $voti.' - '.$vaartus.'<br />';
+    }
+    echo '--------------'.'<br />';
+}
+
+echo '<hr />';
