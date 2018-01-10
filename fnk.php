@@ -17,6 +17,21 @@ function raamatuVorm(){
     ';
 }
 
+function loeVormist(){
+    raamatuVorm();
+    $raamat = array();
+    if(count($_POST) > 0){
+        foreach ($_POST as $voti => $vaartus){
+            if(strlen($vaartus) == 0){
+                echo 'Kõik väljad peavad olema täidetud<br />';
+                exit;
+            }
+            $raamat[$voti] = $vaartus;
+        }
+    }
+    return $raamat;
+}
+
 function salvestaRaamat($raamat, $failinimi){
     if (file_exists($failinimi) and is_file($failinimi) and is_writable($failinimi)
 ){
